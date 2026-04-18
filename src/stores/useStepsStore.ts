@@ -1,5 +1,6 @@
 import { create } from 'zustand';
 import type { Word } from '../types/types';
+import { basicWords } from '../lib/words';
 
 
 interface StepType{
@@ -8,7 +9,7 @@ interface StepType{
 }
 
 export const useStepsStore = create<StepType>((set) => ({
-  words: [],
+  words: basicWords,
   setWords: (words) => (set({
     words:words,
   }))

@@ -1,3 +1,4 @@
+import { cn } from "../lib/utils";
 import MainLayout from "../layout/MainLayout"
 import Step from "../components/Step"
 import { useStepsStore } from "../stores/useStepsStore"
@@ -12,8 +13,9 @@ export default function Home() {
         <section className="min-w-120 py-8 border">
           {
             //aqui va un map de todos las palabras.
-            steps && steps.map(step => {
-              return <div>
+            steps && steps.map((_, i) => {
+              const clase = '';
+              return <div key={i}>
                 <Step onClick={() => { }} />
               </div>
             }

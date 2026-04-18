@@ -3,3 +3,12 @@
 @theme {
   --color-blue-mirage: #738AB4;
 }
+
+.item:nth-child(8n + 1) { transform: translateX(0%); }
+.item:nth-child(8n + 2) { transform: translateX(40%); }
+.item:nth-child(8n + 3) { transform: translateX(80%); }
+.item:nth-child(8n + 4) { transform: translateX(40%); }
+.item:nth-child(8n + 5) { transform: translateX(0%); }
+.item:nth-child(8n + 6) { transform: translateX(-40%); }
+.item:nth-child(8n + 7) { transform: translateX(-80%); }
+.item:nth-child(8n + 8) { transform: translateX(-40%); }

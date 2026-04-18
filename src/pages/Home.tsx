@@ -1,3 +1,4 @@
+
 import { cn } from "../lib/utils";
 import MainLayout from "../layout/MainLayout"
 import Step from "../components/Step"
@@ -10,19 +11,19 @@ export default function Home() {
         <div className="pt-5">
           <h1 className="text-4xl">Listo?!</h1>
         </div>
-        <section className="min-w-120 py-8 border">
+        <section className="min-w-120 py-8 border flex flex-col items-center justify-center contenedor">
           {
             //aqui va un map de todos las palabras.
-            steps && steps.map((_, i) => {
-              const clase = '';
-              return <div key={i}>
-                <Step onClick={() => { }} />
-              </div>
-            }
-            )
+            (() => {
+              return steps && steps.map((_, i) => (
+                <div key={i} className={cn('item', '-my-6')}>
+                  <Step onClick={() => { }} />
+                </div>
+              ));
+            })()
           }
         </section>
       </div>
-    </div>
-  </MainLayout>
+    </div >
+  </MainLayout >
 }

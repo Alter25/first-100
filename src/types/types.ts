@@ -10,3 +10,10 @@ export interface Word {
   image_url?: string | null;
   progress?: number;
 }
+
+export type LevelStatus = "correct" | "wrong" | "unanswered";
+
+export interface LevelResult {
+  status: "correct" | "wrong";
+  answeredAt: number;
+}

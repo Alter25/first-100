@@ -1,5 +1,18 @@
 @import "tailwindcss";
 
+@keyframes timer-shrink {
+  from { transform: scaleX(1); }
+  to   { transform: scaleX(0); }
+}
+.timer-bar-anim {
+  height: 100%;
+  transform-origin: left;
+  animation: timer-shrink 30s linear forwards;
+}
+.timer-bar-anim.paused {
+  animation-play-state: paused;
+}
+
 @theme {
   --color-blue-mirage: #738AB4;
 }
@@ -8,10 +21,10 @@
 .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
 
 .item:nth-child(8n + 1) { transform: translateX(0%); }
-.item:nth-child(8n + 2) { transform: translateX(40%); }
-.item:nth-child(8n + 3) { transform: translateX(80%); }
-.item:nth-child(8n + 4) { transform: translateX(40%); }
+.item:nth-child(8n + 2) { transform: translateX(35%); }
+.item:nth-child(8n + 3) { transform: translateX(70%); }
+.item:nth-child(8n + 4) { transform: translateX(35%); }
 .item:nth-child(8n + 5) { transform: translateX(0%); }
-.item:nth-child(8n + 6) { transform: translateX(-40%); }
-.item:nth-child(8n + 7) { transform: translateX(-80%); }
-.item:nth-child(8n + 8) { transform: translateX(-40%); }
+.item:nth-child(8n + 6) { transform: translateX(-35%); }
+.item:nth-child(8n + 7) { transform: translateX(-70%); }
+.item:nth-child(8n + 8) { transform: translateX(-35%); }

@@ -7,7 +7,7 @@ interface Store {
 }
 
 export const useUIStore = create<Store>((set) => ({
-  isModalOpen: true,
+  isModalOpen: false,
   openModal: () => set(() => ({ isModalOpen: true })),
   closeModal: () => set(() => ({ isModalOpen: false })),
 }));

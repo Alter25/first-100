@@ -1,27 +1,29 @@
 import { cn } from "../lib/utils";
-import { useEffect, useState } from "react";
+
 interface Props {
-  aWord: string;
-  rightWord: string;
+  word: string;
+  isCorrect: boolean;
+  revealed: boolean;
+  onAnswer: (correct: boolean) => void;
 }
 
-export default function QCard({ aWord, rightWord }: Props) {
-  const [trigger, setTrigger] = useState<string>('bg-blue-mirage');
-  const handleBackground = () => {
-    if (aWord === rightWord) {
-      setTrigger('bg-green-400');
-    } else {
-      setTrigger('bg-red-400');
-    }
-  }
-  useEffect(() => { }, [trigger])
+export default function QCard({ word, isCorrect, revealed, onAnswer }: Props) {
+  const getBg = () => {
+    if (!revealed) return "bg-blue-mirage hover:bg-blue-mirage/80 active:scale-95";
+    if (isCorrect) return "bg-green-500 text-white";
+    return "bg-blue-mirage/40 text-white/50";
+  };
+
   return (
     <button
-      onClick={handleBackground}
-      className={cn('bg-blue-mirage hover:bg-blue-mirage/80 border rounded-xl w-80 h-30', trigger)} >
-      <p>
-        {aWord}
-      </p>
+      onClick={() => !revealed && onAnswer(isCorrect)}
+      disabled={revealed}
+      className={cn(
+        "border rounded-xl w-full h-14 font-medium transition-all duration-200 text-white text-sm px-3",
+        getBg()
+      )}
+    >
+      {word}
     </button>
-  )
+  );
 }

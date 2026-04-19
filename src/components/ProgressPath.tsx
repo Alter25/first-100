@@ -1,88 +1,81 @@
-import { useEffect, useRef, useState } from "react";
+const HALF_DIAG = (72 / 2) * Math.SQRT2; // ≈ 50.9px — center to tip of rotated 72px square
 
-const STEP_SIZE = 72;
-const VERTICAL_SPACING = 72;
-const PADDING_TOP = 32;
-const X_OFFSETS = [0, 0.35, 0.70, 0.35, 0, -0.35, -0.70, -0.35];
+interface StepPos { cx: number; cy: number; }
 
 interface Props {
-  total: number;
+  positions: StepPos[];
   completedUpTo: number;
+  width: number;
+  height: number;
 }
 
-function buildPath(count: number, width: number): string {
-  const cx = width / 2;
-  const r = STEP_SIZE / 2;
-  const points = Array.from({ length: count }, (_, i) => {
-    const x = cx + X_OFFSETS[i % 8] * STEP_SIZE;
-    const y = PADDING_TOP + r + i * VERTICAL_SPACING;
-    return `${x},${y}`;
-  });
-  return `M ${points.join(" L ")}`;
+/** Builds segments BETWEEN buttons: bottom_tip(i) → top_tip(i+1) */
+function buildSegments(positions: StepPos[], from: number, to: number): string {
+  const segs: string[] = [];
+  for (let i = from; i < to - 1; i++) {
+    const bot = `${positions[i].cx.toFixed(1)},${(positions[i].cy + HALF_DIAG).toFixed(1)}`;
+    const top = `${positions[i + 1].cx.toFixed(1)},${(positions[i + 1].cy - HALF_DIAG).toFixed(1)}`;
+    segs.push(`M ${bot} L ${top}`);
+  }
+  return segs.join(" ");
 }
 
-export default function ProgressPath({ total, completedUpTo }: Props) {
-  const wrapperRef = useRef<HTMLDivElement>(null);
-  const progressPathRef = useRef<SVGPathElement>(null);
-  const [width, setWidth] = useState(0);
-  const [progressLen, setProgressLen] = useState(0);
-  const [totalLen, setTotalLen] = useState(0);
+export default function ProgressPath({ positions, completedUpTo, width, height }: Props) {
+  if (width === 0 || positions.length < 2) return null;
 
-  useEffect(() => {
-    const el = wrapperRef.current;
-    if (!el) return;
-    const ro = new ResizeObserver(([entry]) => setWidth(entry.contentRect.width));
-    ro.observe(el);
-    setWidth(el.clientWidth);
-    return () => ro.disconnect();
-  }, []);
-
-  const svgHeight = PADDING_TOP + STEP_SIZE / 2 + (total - 1) * VERTICAL_SPACING + STEP_SIZE / 2 + PADDING_TOP;
-  const fullPath = width > 0 ? buildPath(total, width) : "";
-  const partialPath = width > 0 && completedUpTo > 0 ? buildPath(completedUpTo, width) : "";
-
-  useEffect(() => {
-    if (!progressPathRef.current) return;
-    const len = progressPathRef.current.getTotalLength();
-    setProgressLen(len);
-    setTotalLen(len);
-  }, [partialPath]);
+  const bgPath = buildSegments(positions, 0, positions.length);
+  const progressPath = buildSegments(positions, 0, completedUpTo);
 
   return (
-    <div ref={wrapperRef} className="absolute inset-0 pointer-events-none">
-      {width > 0 && (
-        <svg
-          width={width}
-          height={svgHeight}
-          className="absolute top-0 left-0"
-          aria-hidden="true"
-        >
-          {/* Background path */}
+    <div className="absolute top-0 left-0 w-full pointer-events-none">
+      <svg width={width} height={height} className="absolute top-0 left-0" aria-hidden="true">
+        <defs>
+          <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+            <feGaussianBlur stdDeviation="3" result="blur" />
+            <feMerge>
+              <feMergeNode in="blur" />
+              <feMergeNode in="SourceGraphic" />
+            </feMerge>
+          </filter>
+          <linearGradient id="progressGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" stopColor="#4ade80" />
+            <stop offset="100%" stopColor="#ffffff" stopOpacity="0.9" />
+          </linearGradient>
+        </defs>
+
+        {/* Background: dotted line between all steps */}
+        <path
+          d={bgPath}
+          fill="none"
+          stroke="rgba(255,255,255,0.2)"
+          strokeWidth={2.5}
+          strokeLinecap="round"
+          strokeDasharray="3 14"
+        />
+
+        {/* Progress shadow for depth */}
+        {completedUpTo > 1 && (
           <path
-            d={fullPath}
+            d={progressPath}
             fill="none"
-            stroke="rgba(255,255,255,0.15)"
-            strokeWidth={4}
+            stroke="rgba(0,0,0,0.25)"
+            strokeWidth={8}
             strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeDasharray="8 8"
           />
-          {/* Progress path */}
-          {completedUpTo > 0 && (
-            <path
-              ref={progressPathRef}
-              d={partialPath}
-              fill="none"
-              stroke="rgba(255,255,255,0.7)"
-              strokeWidth={4}
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeDasharray={totalLen}
-              strokeDashoffset={totalLen - progressLen}
-            />
-          )}
-        </svg>
-      )}
+        )}
+
+        {/* Progress line with glow */}
+        {completedUpTo > 1 && (
+          <path
+            d={progressPath}
+            fill="none"
+            stroke="url(#progressGrad)"
+            strokeWidth={5}
+            strokeLinecap="round"
+            filter="url(#glow)"
+          />
+        )}
+      </svg>
     </div>
   );
 }

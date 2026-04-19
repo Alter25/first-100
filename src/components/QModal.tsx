@@ -1,4 +1,4 @@
-import { useState, useEffect, useMemo } from "react";
+import { useState, useEffect, useRef, useMemo } from "react";
 import type { Word } from "../types/types";
 import { useUIStore } from "../stores/useUIStore";
 import { useProgressStore } from "../stores/useProgressStore";
@@ -30,6 +30,7 @@ function QuizContent({ question, levelIndex }: { question: Word; levelIndex: num
     return shuffle([right, ...wrong]);
   }, [question]);
 
+  const closeRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const timer = useTimer(TIMER_SECONDS, () => handleAnswer(false));
 
   function handleAnswer(isCorrect: boolean) {
@@ -38,10 +39,12 @@ function QuizContent({ question, levelIndex }: { question: Word; levelIndex: num
     setRevealed(true);
     setCorrect(isCorrect);
     setResult(levelIndex, isCorrect ? "correct" : "wrong");
+    closeRef.current = setTimeout(closeModal, 2000);
   }
 
   useEffect(() => {
     timer.start();
+    return () => { if (closeRef.current) clearTimeout(closeRef.current); };
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   const barColor =
@@ -116,12 +119,17 @@ export default function QModal({ question, levelIndex }: Props) {
   if (!isModalOpen || !question || levelIndex === null) return null;
 
   return (
-    <dialog
-      open
-      onClick={(e) => { if (e.target === e.currentTarget) closeModal(); }}
-      className="w-[92vw] max-w-lg max-h-[90dvh] bg-white/95 mt-4 sm:mt-12 border rounded-2xl mx-auto overflow-hidden flex flex-col shadow-2xl backdrop:bg-black/40 backdrop:backdrop-blur-sm"
-    >
-      <QuizContent key={levelIndex} question={question} levelIndex={levelIndex} />
-    </dialog>
+    <>
+      <div
+        className="fixed inset-0 z-40 bg-black/50 backdrop-blur-sm"
+        onClick={closeModal}
+      />
+      <dialog
+        open
+        className="fixed top-[4vh] left-1/2 -translate-x-1/2 z-50 w-[92vw] max-w-lg max-h-[88dvh] bg-white/95 border rounded-2xl overflow-hidden flex flex-col shadow-2xl"
+      >
+        <QuizContent key={levelIndex} question={question} levelIndex={levelIndex} />
+      </dialog>
+    </>
   );
 }

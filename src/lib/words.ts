@@ -1,4 +1,5 @@
-export const basicWords = [
+import type { Word } from "../types/types";
+export const basicWords: Word[] = [
   {
     word: "Hello",
     word_description: "Saludo común",
@@ -20,7 +21,7 @@ export const basicWords = [
     ],
     image_url:
       "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=400",
-    question: "Como se dice Hello en espanol?",
+    question: `¿Cómo se dice "Hello" en español?`,
     progress: 0,
   },
   {
@@ -44,7 +45,7 @@ export const basicWords = [
     ],
     image_url:
       "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=400",
-    question: "Como se dice Goodbye en espanol?",
+    question: `¿Cómo se dice "Goodbye" en español?`,
     progress: 0,
   },
   {
@@ -68,7 +69,7 @@ export const basicWords = [
     ],
     image_url:
       "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=400",
-    question: "Como se dice Thank you en espanol?",
+    question: `¿Cómo se dice "Thank you" en español?`,
     progress: 0,
   },
   {
@@ -92,7 +93,7 @@ export const basicWords = [
     ],
     image_url:
       "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=400",
-    question: "Como se dice Please en espanol?",
+    question: `¿Cómo se dice "Please" en español?`,
     progress: 0,
   },
   {
@@ -116,7 +117,7 @@ export const basicWords = [
     ],
     image_url:
       "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=400",
-    question: "Como se dice Yes en espanol?",
+    question: `¿Cómo se dice "Yes" en español?`,
     progress: 0,
   },
   {
@@ -129,7 +130,7 @@ export const basicWords = [
     similar_words: ["yo", "él", "tú", "me", "te", "se", "la", "lo", "un", "su"],
     image_url:
       "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=400",
-    question: "Como se dice No en espanol?",
+    question: `¿Cómo se dice "No" en español?`,
     progress: 0,
   },
   {
@@ -153,7 +154,7 @@ export const basicWords = [
     ],
     image_url:
       "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=400",
-    question: "Como se dice Sorry en espanol?",
+    question: `¿Cómo se dice "Sorry" en español?`,
     progress: 0,
   },
   {
@@ -177,7 +178,7 @@ export const basicWords = [
     ],
     image_url:
       "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=400",
-    question: "Como se dice Excuse me en espanol?",
+    question: `¿Cómo se dice "Excuse me" en español?`,
     progress: 0,
   },
   {
@@ -201,7 +202,7 @@ export const basicWords = [
     ],
     image_url:
       "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=400",
-    question: "Como se dice What en espanol?",
+    question: `¿Cómo se dice "What" en español?`,
     progress: 0,
   },
   {
@@ -225,7 +226,7 @@ export const basicWords = [
     ],
     image_url:
       "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=400",
-    question: "Como se dice When en espanol?",
+    question: `¿Cómo se dice "When" en español?`,
     progress: 0,
   },
   {
@@ -249,7 +250,7 @@ export const basicWords = [
     ],
     image_url:
       "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=400",
-    question: "Como se dice Where en espanol?",
+    question: `¿Cómo se dice "Where" en español?`,
     progress: 0,
   },
   {
@@ -273,7 +274,7 @@ export const basicWords = [
     ],
     image_url:
       "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=400",
-    question: "Como se dice Who en espanol?",
+    question: `¿Cómo se dice "Who" en español?`,
     progress: 0,
   },
   {
@@ -297,7 +298,7 @@ export const basicWords = [
     ],
     image_url:
       "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=400",
-    question: "Como se dice Why en espanol?",
+    question: `¿Cómo se dice "Why" en español?`,
     progress: 0,
   },
   {
@@ -321,7 +322,7 @@ export const basicWords = [
     ],
     image_url:
       "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=400",
-    question: "Como se dice How en espanol?",
+    question: `¿Cómo se dice "How" en español?`,
     progress: 0,
   },
   {
@@ -334,7 +335,7 @@ export const basicWords = [
     similar_words: ["yo", "él", "tú", "me", "te", "se", "la", "lo", "un", "su"],
     image_url:
       "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=400",
-    question: "Como se dice I en espanol?",
+    question: `¿Cómo se dice "I" en español?`,
     progress: 0,
   },
   {
@@ -358,7 +359,7 @@ export const basicWords = [
     ],
     image_url:
       "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=400",
-    question: "Como se dice You en espanol?",
+    question: `¿Cómo se dice "You" en español?`,
     progress: 0,
   },
   {
@@ -371,7 +372,7 @@ export const basicWords = [
     similar_words: ["yo", "él", "tú", "me", "te", "se", "la", "lo", "un", "su"],
     image_url:
       "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400",
-    question: "Como se dice He en espanol?",
+    question: `¿Cómo se dice "He" en español?`,
     progress: 0,
   },
   {
@@ -395,7 +396,7 @@ export const basicWords = [
     ],
     image_url:
       "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400",
-    question: "Como se dice She en espanol?",
+    question: `¿Cómo se dice "She" en español?`,
     progress: 0,
   },
   {
@@ -408,7 +409,7 @@ export const basicWords = [
     similar_words: ["yo", "él", "tú", "me", "te", "se", "la", "lo", "un", "su"],
     image_url:
       "https://images.unsplash.com/photo-1552820728-8ac41f1ce891?w=400",
-    question: "Como se dice It en espanol?",
+    question: `¿Cómo se dice "It" en español?`,
     progress: 0,
   },
   {
@@ -421,7 +422,7 @@ export const basicWords = [
     similar_words: ["yo", "él", "tú", "me", "te", "se", "la", "lo", "un", "su"],
     image_url:
       "https://images.unsplash.com/photo-1552664730-d307ca884978?w=400",
-    question: "Como se dice We en espanol?",
+    question: `¿Cómo se dice "We" en español?`,
     progress: 0,
   },
   {
@@ -445,7 +446,7 @@ export const basicWords = [
     ],
     image_url:
       "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=400",
-    question: "Como se dice They en espanol?",
+    question: `¿Cómo se dice "They" en español?`,
     progress: 0,
   },
   {
@@ -458,7 +459,7 @@ export const basicWords = [
     similar_words: ["yo", "él", "tú", "me", "te", "se", "la", "lo", "un", "su"],
     image_url:
       "https://images.unsplash.com/photo-1570129477492-45c003d96eae?w=400",
-    question: "Como se dice My en espanol?",
+    question: `¿Cómo se dice "My" en español?`,
     progress: 0,
   },
   {
@@ -482,7 +483,7 @@ export const basicWords = [
     ],
     image_url:
       "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=400",
-    question: "Como se dice Your en espanol?",
+    question: `¿Cómo se dice "Your" en español?`,
     progress: 0,
   },
   {
@@ -506,7 +507,7 @@ export const basicWords = [
     ],
     image_url:
       "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400",
-    question: "Como se dice His en espanol?",
+    question: `¿Cómo se dice "His" en español?`,
     progress: 0,
   },
   {
@@ -530,7 +531,7 @@ export const basicWords = [
     ],
     image_url:
       "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=400",
-    question: "Como se dice Her en espanol?",
+    question: `¿Cómo se dice "Her" en español?`,
     progress: 0,
   },
   {
@@ -543,7 +544,7 @@ export const basicWords = [
     similar_words: ["yo", "él", "tú", "me", "te", "se", "la", "lo", "un", "su"],
     image_url:
       "https://images.unsplash.com/photo-1552664730-d307ca884978?w=400",
-    question: "Como se dice Is en espanol?",
+    question: `¿Cómo se dice "Is" en español?`,
     progress: 0,
   },
   {
@@ -567,7 +568,7 @@ export const basicWords = [
     ],
     image_url:
       "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=400",
-    question: "Como se dice Are en espanol?",
+    question: `¿Cómo se dice "Are" en español?`,
     progress: 0,
   },
   {
@@ -580,7 +581,7 @@ export const basicWords = [
     similar_words: ["yo", "él", "tú", "me", "te", "se", "la", "lo", "un", "su"],
     image_url:
       "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=400",
-    question: "Como se dice Am en espanol?",
+    question: `¿Cómo se dice "Am" en español?`,
     progress: 0,
   },
   {
@@ -604,7 +605,7 @@ export const basicWords = [
     ],
     image_url:
       "https://images.unsplash.com/photo-1552664730-d307ca884978?w=400",
-    question: "Como se dice Have en espanol?",
+    question: `¿Cómo se dice "Have" en español?`,
     progress: 0,
   },
   {
@@ -628,7 +629,7 @@ export const basicWords = [
     ],
     image_url:
       "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=400",
-    question: "Como se dice Has en espanol?",
+    question: `¿Cómo se dice "Has" en español?`,
     progress: 0,
   },
   {
@@ -641,7 +642,7 @@ export const basicWords = [
     similar_words: ["yo", "él", "tú", "me", "te", "se", "la", "lo", "un", "su"],
     image_url:
       "https://images.unsplash.com/photo-1552664730-d307ca884978?w=400",
-    question: "Como se dice Do en espanol?",
+    question: `¿Cómo se dice "Do" en español?`,
     progress: 0,
   },
   {
@@ -665,7 +666,7 @@ export const basicWords = [
     ],
     image_url:
       "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=400",
-    question: "Como se dice Does en espanol?",
+    question: `¿Cómo se dice "Does" en español?`,
     progress: 0,
   },
   {
@@ -678,7 +679,7 @@ export const basicWords = [
     similar_words: ["yo", "él", "tú", "me", "te", "se", "la", "lo", "un", "su"],
     image_url:
       "https://images.unsplash.com/photo-1488749367386-86a0e6a1fc7e?w=400",
-    question: "Como se dice Go en espanol?",
+    question: `¿Cómo se dice "Go" en español?`,
     progress: 0,
   },
   {
@@ -702,7 +703,7 @@ export const basicWords = [
     ],
     image_url:
       "https://images.unsplash.com/photo-1552664730-d307ca884978?w=400",
-    question: "Como se dice Come en espanol?",
+    question: `¿Cómo se dice "Come" en español?`,
     progress: 0,
   },
   {
@@ -726,7 +727,7 @@ export const basicWords = [
     ],
     image_url:
       "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=400",
-    question: "Como se dice Like en espanol?",
+    question: `¿Cómo se dice "Like" en español?`,
     progress: 0,
   },
   {
@@ -750,7 +751,7 @@ export const basicWords = [
     ],
     image_url:
       "https://images.unsplash.com/photo-1516595022570-f06e0b74e63f?w=400",
-    question: "Como se dice Love en espanol?",
+    question: `¿Cómo se dice "Love" en español?`,
     progress: 0,
   },
   {
@@ -774,7 +775,7 @@ export const basicWords = [
     ],
     image_url:
       "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=400",
-    question: "Como se dice Want en espanol?",
+    question: `¿Cómo se dice "Want" en español?`,
     progress: 0,
   },
   {
@@ -798,7 +799,7 @@ export const basicWords = [
     ],
     image_url:
       "https://images.unsplash.com/photo-1552664730-d307ca884978?w=400",
-    question: "Como se dice Need en espanol?",
+    question: `¿Cómo se dice "Need" en español?`,
     progress: 0,
   },
   {
@@ -822,7 +823,7 @@ export const basicWords = [
     ],
     image_url:
       "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=400",
-    question: "Como se dice Can en espanol?",
+    question: `¿Cómo se dice "Can" en español?`,
     progress: 0,
   },
   {
@@ -846,7 +847,7 @@ export const basicWords = [
     ],
     image_url:
       "https://images.unsplash.com/photo-1552664730-d307ca884978?w=400",
-    question: "Como se dice Make en espanol?",
+    question: `¿Cómo se dice "Make" en español?`,
     progress: 0,
   },
   {
@@ -870,7 +871,7 @@ export const basicWords = [
     ],
     image_url:
       "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=400",
-    question: "Como se dice Take en espanol?",
+    question: `¿Cómo se dice "Take" en español?`,
     progress: 0,
   },
   {
@@ -894,7 +895,7 @@ export const basicWords = [
     ],
     image_url:
       "https://images.unsplash.com/photo-1552664730-d307ca884978?w=400",
-    question: "Como se dice Give en espanol?",
+    question: `¿Cómo se dice "Give" en español?`,
     progress: 0,
   },
   {
@@ -918,7 +919,7 @@ export const basicWords = [
     ],
     image_url:
       "https://images.unsplash.com/photo-1552664730-d307ca884978?w=400",
-    question: "Como se dice Work en espanol?",
+    question: `¿Cómo se dice "Work" en español?`,
     progress: 0,
   },
   {
@@ -942,7 +943,7 @@ export const basicWords = [
     ],
     image_url:
       "https://images.unsplash.com/photo-1552664730-d307ca884978?w=400",
-    question: "Como se dice Learn en espanol?",
+    question: `¿Cómo se dice "Learn" en español?`,
     progress: 0,
   },
   {
@@ -966,7 +967,7 @@ export const basicWords = [
     ],
     image_url:
       "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=400",
-    question: "Como se dice Think en espanol?",
+    question: `¿Cómo se dice "Think" en español?`,
     progress: 0,
   },
   {
@@ -990,7 +991,7 @@ export const basicWords = [
     ],
     image_url:
       "https://images.unsplash.com/photo-1552664730-d307ca884978?w=400",
-    question: "Como se dice Know en espanol?",
+    question: `¿Cómo se dice "Know" en español?`,
     progress: 0,
   },
   {
@@ -1014,7 +1015,7 @@ export const basicWords = [
     ],
     image_url:
       "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=400",
-    question: "Como se dice Say en espanol?",
+    question: `¿Cómo se dice "Say" en español?`,
     progress: 0,
   },
   {
@@ -1038,7 +1039,7 @@ export const basicWords = [
     ],
     image_url:
       "https://images.unsplash.com/photo-1552664730-d307ca884978?w=400",
-    question: "Como se dice See en espanol?",
+    question: `¿Cómo se dice "See" en español?`,
     progress: 0,
   },
   {
@@ -1062,7 +1063,7 @@ export const basicWords = [
     ],
     image_url:
       "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=400",
-    question: "Como se dice Get en espanol?",
+    question: `¿Cómo se dice "Get" en español?`,
     progress: 0,
   },
   {
@@ -1086,7 +1087,7 @@ export const basicWords = [
     ],
     image_url:
       "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400",
-    question: "Como se dice Man en espanol?",
+    question: `¿Cómo se dice "Man" en español?`,
     progress: 0,
   },
   {
@@ -1110,7 +1111,7 @@ export const basicWords = [
     ],
     image_url:
       "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400",
-    question: "Como se dice Woman en espanol?",
+    question: `¿Cómo se dice "Woman" en español?`,
     progress: 0,
   },
   {
@@ -1134,7 +1135,7 @@ export const basicWords = [
     ],
     image_url:
       "https://images.unsplash.com/photo-1503454537688-e47a5cb0adf0?w=400",
-    question: "Como se dice Child en espanol?",
+    question: `¿Cómo se dice "Child" en español?`,
     progress: 0,
   },
   {
@@ -1158,7 +1159,7 @@ export const basicWords = [
     ],
     image_url:
       "https://images.unsplash.com/photo-1495567720989-cebfdc6d5fb3?w=400",
-    question: "Como se dice Day en espanol?",
+    question: `¿Cómo se dice "Day" en español?`,
     progress: 0,
   },
   {
@@ -1182,7 +1183,7 @@ export const basicWords = [
     ],
     image_url:
       "https://images.unsplash.com/photo-1444080748397-f442aa95c3e5?w=400",
-    question: "Como se dice Night en espanol?",
+    question: `¿Cómo se dice "Night" en español?`,
     progress: 0,
   },
   {
@@ -1206,7 +1207,7 @@ export const basicWords = [
     ],
     image_url:
       "https://images.unsplash.com/photo-1517457373614-b7152f800fd1?w=400",
-    question: "Como se dice Time en espanol?",
+    question: `¿Cómo se dice "Time" en español?`,
     progress: 0,
   },
   {
@@ -1230,7 +1231,7 @@ export const basicWords = [
     ],
     image_url:
       "https://images.unsplash.com/photo-1570129477492-45c003d96eae?w=400",
-    question: "Como se dice House en espanol?",
+    question: `¿Cómo se dice "House" en español?`,
     progress: 0,
   },
   {
@@ -1254,7 +1255,7 @@ export const basicWords = [
     ],
     image_url:
       "https://images.unsplash.com/photo-1552664730-d307ca884978?w=400",
-    question: "Como se dice Car en espanol?",
+    question: `¿Cómo se dice "Car" en español?`,
     progress: 0,
   },
   {
@@ -1278,7 +1279,7 @@ export const basicWords = [
     ],
     image_url:
       "https://images.unsplash.com/photo-1507842217343-583f20270319?w=400",
-    question: "Como se dice Book en espanol?",
+    question: `¿Cómo se dice "Book" en español?`,
     progress: 0,
   },
   {
@@ -1302,7 +1303,7 @@ export const basicWords = [
     ],
     image_url:
       "https://images.unsplash.com/photo-1509803874385-db7c23645e71?w=400",
-    question: "Como se dice Water en espanol?",
+    question: `¿Cómo se dice "Water" en español?`,
     progress: 0,
   },
   {
@@ -1326,7 +1327,7 @@ export const basicWords = [
     ],
     image_url:
       "https://images.unsplash.com/photo-1495577913117-a0241e4ec97d?w=400",
-    question: "Como se dice Food en espanol?",
+    question: `¿Cómo se dice "Food" en español?`,
     progress: 0,
   },
   {
@@ -1350,7 +1351,7 @@ export const basicWords = [
     ],
     image_url:
       "https://images.unsplash.com/photo-1553729754-5f935e49c61a?w=400",
-    question: "Como se dice Money en espanol?",
+    question: `¿Cómo se dice "Money" en español?`,
     progress: 0,
   },
   {
@@ -1374,7 +1375,7 @@ export const basicWords = [
     ],
     image_url:
       "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=400",
-    question: "Como se dice Computer en espanol?",
+    question: `¿Cómo se dice "Computer" en español?`,
     progress: 0,
   },
   {
@@ -1398,7 +1399,7 @@ export const basicWords = [
     ],
     image_url:
       "https://images.unsplash.com/photo-1511707267537-b85faf00021e?w=400",
-    question: "Como se dice Phone en espanol?",
+    question: `¿Cómo se dice "Phone" en español?`,
     progress: 0,
   },
   {
@@ -1422,7 +1423,7 @@ export const basicWords = [
     ],
     image_url:
       "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=400",
-    question: "Como se dice Friend en espanol?",
+    question: `¿Cómo se dice "Friend" en español?`,
     progress: 0,
   },
   {
@@ -1446,7 +1447,7 @@ export const basicWords = [
     ],
     image_url:
       "https://images.unsplash.com/photo-1511895426328-dc8714191300?w=400",
-    question: "Como se dice Family en espanol?",
+    question: `¿Cómo se dice "Family" en español?`,
     progress: 0,
   },
   {
@@ -1470,7 +1471,7 @@ export const basicWords = [
     ],
     image_url:
       "https://images.unsplash.com/photo-1552664730-d307ca884978?w=400",
-    question: "Como se dice Work en espanol?",
+    question: `¿Cómo se dice "Work" en español?`,
     progress: 0,
   },
   {
@@ -1494,7 +1495,7 @@ export const basicWords = [
     ],
     image_url:
       "https://images.unsplash.com/photo-1427504494785-cdfe4e2e4e28?w=400",
-    question: "Como se dice School en espanol?",
+    question: `¿Cómo se dice "School" en español?`,
     progress: 0,
   },
   {
@@ -1518,7 +1519,7 @@ export const basicWords = [
     ],
     image_url:
       "https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?w=400",
-    question: "Como se dice City en espanol?",
+    question: `¿Cómo se dice "City" en español?`,
     progress: 0,
   },
   {
@@ -1542,7 +1543,7 @@ export const basicWords = [
     ],
     image_url:
       "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=400",
-    question: "Como se dice Country en espanol?",
+    question: `¿Cómo se dice "Country" en español?`,
     progress: 0,
   },
   {
@@ -1566,7 +1567,7 @@ export const basicWords = [
     ],
     image_url:
       "https://images.unsplash.com/photo-1517457373614-b7152f800fd1?w=400",
-    question: "Como se dice Hand en espanol?",
+    question: `¿Cómo se dice "Hand" en español?`,
     progress: 0,
   },
   {
@@ -1590,7 +1591,7 @@ export const basicWords = [
     ],
     image_url:
       "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400",
-    question: "Como se dice Head en espanol?",
+    question: `¿Cómo se dice "Head" en español?`,
     progress: 0,
   },
   {
@@ -1614,7 +1615,7 @@ export const basicWords = [
     ],
     image_url:
       "https://images.unsplash.com/photo-1517457373614-b7152f800fd1?w=400",
-    question: "Como se dice Eye en espanol?",
+    question: `¿Cómo se dice "Eye" en español?`,
     progress: 0,
   },
   {
@@ -1638,7 +1639,7 @@ export const basicWords = [
     ],
     image_url:
       "https://images.unsplash.com/photo-1516595022570-f06e0b74e63f?w=400",
-    question: "Como se dice Heart en espanol?",
+    question: `¿Cómo se dice "Heart" en español?`,
     progress: 0,
   },
   {
@@ -1662,7 +1663,7 @@ export const basicWords = [
     ],
     image_url:
       "https://images.unsplash.com/photo-1551888016-10a93f3a77b0?w=400",
-    question: "Como se dice Color en espanol?",
+    question: `¿Cómo se dice "Color" en español?`,
     progress: 0,
   },
   {
@@ -1686,7 +1687,7 @@ export const basicWords = [
     ],
     image_url:
       "https://images.unsplash.com/photo-1516595022570-f06e0b74e63f?w=400",
-    question: "Como se dice Number en espanol?",
+    question: `¿Cómo se dice "Number" en español?`,
     progress: 0,
   },
   {
@@ -1710,7 +1711,7 @@ export const basicWords = [
     ],
     image_url:
       "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=400",
-    question: "Como se dice Good en espanol?",
+    question: `¿Cómo se dice "Good" en español?`,
     progress: 0,
   },
   {
@@ -1734,7 +1735,7 @@ export const basicWords = [
     ],
     image_url:
       "https://images.unsplash.com/photo-1552664730-d307ca884978?w=400",
-    question: "Como se dice Bad en espanol?",
+    question: `¿Cómo se dice "Bad" en español?`,
     progress: 0,
   },
   {
@@ -1758,7 +1759,7 @@ export const basicWords = [
     ],
     image_url:
       "https://images.unsplash.com/photo-1488749367386-86a0e6a1fc7e?w=400",
-    question: "Como se dice Big en espanol?",
+    question: `¿Cómo se dice "Big" en español?`,
     progress: 0,
   },
   {
@@ -1782,7 +1783,7 @@ export const basicWords = [
     ],
     image_url:
       "https://images.unsplash.com/photo-1552664730-d307ca884978?w=400",
-    question: "Como se dice Small en espanol?",
+    question: `¿Cómo se dice "Small" en español?`,
     progress: 0,
   },
   {
@@ -1806,7 +1807,7 @@ export const basicWords = [
     ],
     image_url:
       "https://images.unsplash.com/photo-1495521821757-a1efb6729352?w=400",
-    question: "Como se dice Hot en espanol?",
+    question: `¿Cómo se dice "Hot" en español?`,
     progress: 0,
   },
   {
@@ -1830,7 +1831,7 @@ export const basicWords = [
     ],
     image_url:
       "https://images.unsplash.com/photo-1444080748397-f442aa95c3e5?w=400",
-    question: "Como se dice Cold en espanol?",
+    question: `¿Cómo se dice "Cold" en español?`,
     progress: 0,
   },
   {
@@ -1854,7 +1855,7 @@ export const basicWords = [
     ],
     image_url:
       "https://images.unsplash.com/photo-1516595022570-f06e0b74e63f?w=400",
-    question: "Como se dice Happy en espanol?",
+    question: `¿Cómo se dice "Happy" en español?`,
     progress: 0,
   },
   {
@@ -1878,7 +1879,7 @@ export const basicWords = [
     ],
     image_url:
       "https://images.unsplash.com/photo-1552664730-d307ca884978?w=400",
-    question: "Como se dice Sad en espanol?",
+    question: `¿Cómo se dice "Sad" en español?`,
     progress: 0,
   },
   {
@@ -1902,7 +1903,7 @@ export const basicWords = [
     ],
     image_url:
       "https://images.unsplash.com/photo-1552664730-d307ca884978?w=400",
-    question: "Como se dice Fast en espanol?",
+    question: `¿Cómo se dice "Fast" en español?`,
     progress: 0,
   },
   {
@@ -1926,7 +1927,7 @@ export const basicWords = [
     ],
     image_url:
       "https://images.unsplash.com/photo-1491896293779-27c5b9bc26f3?w=400",
-    question: "Como se dice Slow en espanol?",
+    question: `¿Cómo se dice "Slow" en español?`,
     progress: 0,
   },
   {
@@ -1950,7 +1951,7 @@ export const basicWords = [
     ],
     image_url:
       "https://images.unsplash.com/photo-1552664730-d307ca884978?w=400",
-    question: "Como se dice New en espanol?",
+    question: `¿Cómo se dice "New" en español?`,
     progress: 0,
   },
   {
@@ -1974,7 +1975,7 @@ export const basicWords = [
     ],
     image_url:
       "https://images.unsplash.com/photo-1488749367386-86a0e6a1fc7e?w=400",
-    question: "Como se dice Old en espanol?",
+    question: `¿Cómo se dice "Old" en español?`,
     progress: 0,
   },
   {
@@ -1998,7 +1999,7 @@ export const basicWords = [
     ],
     image_url:
       "https://images.unsplash.com/photo-1495521821757-a1efb6729352?w=400",
-    question: "Como se dice Beautiful en espanol?",
+    question: `¿Cómo se dice "Beautiful" en español?`,
     progress: 0,
   },
   {
@@ -2022,7 +2023,7 @@ export const basicWords = [
     ],
     image_url:
       "https://images.unsplash.com/photo-1552664730-d307ca884978?w=400",
-    question: "Como se dice Ugly en espanol?",
+    question: `¿Cómo se dice "Ugly" en español?`,
     progress: 0,
   },
   {
@@ -2046,7 +2047,7 @@ export const basicWords = [
     ],
     image_url:
       "https://images.unsplash.com/photo-1517457373614-b7152f800fd1?w=400",
-    question: "Como se dice Short en espanol?",
+    question: `¿Cómo se dice "Short" en español?`,
     progress: 0,
   },
   {
@@ -2070,7 +2071,7 @@ export const basicWords = [
     ],
     image_url:
       "https://images.unsplash.com/photo-1488749367386-86a0e6a1fc7e?w=400",
-    question: "Como se dice Long en espanol?",
+    question: `¿Cómo se dice "Long" en español?`,
     progress: 0,
   },
   {
@@ -2094,7 +2095,7 @@ export const basicWords = [
     ],
     image_url:
       "https://images.unsplash.com/photo-1552664730-d307ca884978?w=400",
-    question: "Como se dice Strong en espanol?",
+    question: `¿Cómo se dice "Strong" en español?`,
     progress: 0,
   },
   {
@@ -2118,7 +2119,7 @@ export const basicWords = [
     ],
     image_url:
       "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=400",
-    question: "Como se dice Weak en espanol?",
+    question: `¿Cómo se dice "Weak" en español?`,
     progress: 0,
   },
   {
@@ -2142,7 +2143,7 @@ export const basicWords = [
     ],
     image_url:
       "https://images.unsplash.com/photo-1552664730-d307ca884978?w=400",
-    question: "Como se dice Easy en espanol?",
+    question: `¿Cómo se dice "Easy" en español?`,
     progress: 0,
   },
   {
@@ -2166,7 +2167,7 @@ export const basicWords = [
     ],
     image_url:
       "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=400",
-    question: "Como se dice Difficult en espanol?",
+    question: `¿Cómo se dice "Difficult" en español?`,
     progress: 0,
   },
   {
@@ -2190,7 +2191,7 @@ export const basicWords = [
     ],
     image_url:
       "https://images.unsplash.com/photo-1553729754-5f935e49c61a?w=400",
-    question: "Como se dice Cheap en espanol?",
+    question: `¿Cómo se dice "Cheap" en español?`,
     progress: 0,
   },
   {
@@ -2214,7 +2215,7 @@ export const basicWords = [
     ],
     image_url:
       "https://images.unsplash.com/photo-1552664730-d307ca884978?w=400",
-    question: "Como se dice Expensive en espanol?",
+    question: `¿Cómo se dice "Expensive" en español?`,
     progress: 0,
   },
   {
@@ -2238,7 +2239,7 @@ export const basicWords = [
     ],
     image_url:
       "https://images.unsplash.com/photo-1588195538326-c5b1e9f80a1b?w=400",
-    question: "Como se dice Clean en espanol?",
+    question: `¿Cómo se dice "Clean" en español?`,
     progress: 0,
   },
   {
@@ -2262,7 +2263,7 @@ export const basicWords = [
     ],
     image_url:
       "https://images.unsplash.com/photo-1552664730-d307ca884978?w=400",
-    question: "Como se dice Dirty en espanol?",
+    question: `¿Cómo se dice "Dirty" en español?`,
     progress: 0,
   },
   {
@@ -2286,7 +2287,7 @@ export const basicWords = [
     ],
     image_url:
       "https://images.unsplash.com/photo-1509803874385-db7c23645e71?w=400",
-    question: "Como se dice Wet en espanol?",
+    question: `¿Cómo se dice "Wet" en español?`,
     progress: 0,
   },
   {
@@ -2310,7 +2311,7 @@ export const basicWords = [
     ],
     image_url:
       "https://images.unsplash.com/photo-1495521821757-a1efb6729352?w=400",
-    question: "Como se dice Dry en espanol?",
+    question: `¿Cómo se dice "Dry" en español?`,
     progress: 0,
   },
   {
@@ -2334,7 +2335,7 @@ export const basicWords = [
     ],
     image_url:
       "https://images.unsplash.com/photo-1488749367386-86a0e6a1fc7e?w=400",
-    question: "Como se dice Here en espanol?",
+    question: `¿Cómo se dice "Here" en español?`,
     progress: 0,
   },
   {
@@ -2358,7 +2359,7 @@ export const basicWords = [
     ],
     image_url:
       "https://images.unsplash.com/photo-1488749367386-86a0e6a1fc7e?w=400",
-    question: "Como se dice There en espanol?",
+    question: `¿Cómo se dice "There" en español?`,
     progress: 0,
   },
   {
@@ -2382,7 +2383,7 @@ export const basicWords = [
     ],
     image_url:
       "https://images.unsplash.com/photo-1517457373614-b7152f800fd1?w=400",
-    question: "Como se dice Now en espanol?",
+    question: `¿Cómo se dice "Now" en español?`,
     progress: 0,
   },
   {
@@ -2406,7 +2407,7 @@ export const basicWords = [
     ],
     image_url:
       "https://images.unsplash.com/photo-1495521821757-a1efb6729352?w=400",
-    question: "Como se dice Then en espanol?",
+    question: `¿Cómo se dice "Then" en español?`,
     progress: 0,
   },
   {
@@ -2430,7 +2431,7 @@ export const basicWords = [
     ],
     image_url:
       "https://images.unsplash.com/photo-1495567720989-cebfdc6d5fb3?w=400",
-    question: "Como se dice Today en espanol?",
+    question: `¿Cómo se dice "Today" en español?`,
     progress: 0,
   },
   {
@@ -2454,7 +2455,7 @@ export const basicWords = [
     ],
     image_url:
       "https://images.unsplash.com/photo-1495521821757-a1efb6729352?w=400",
-    question: "Como se dice Tomorrow en espanol?",
+    question: `¿Cómo se dice "Tomorrow" en español?`,
     progress: 0,
   },
   {
@@ -2478,7 +2479,7 @@ export const basicWords = [
     ],
     image_url:
       "https://images.unsplash.com/photo-1444080748397-f442aa95c3e5?w=400",
-    question: "Como se dice Yesterday en espanol?",
+    question: `¿Cómo se dice "Yesterday" en español?`,
     progress: 0,
   },
   {
@@ -2502,7 +2503,7 @@ export const basicWords = [
     ],
     image_url:
       "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=400",
-    question: "Como se dice Always en espanol?",
+    question: `¿Cómo se dice "Always" en español?`,
     progress: 0,
   },
   {
@@ -2526,7 +2527,7 @@ export const basicWords = [
     ],
     image_url:
       "https://images.unsplash.com/photo-1552664730-d307ca884978?w=400",
-    question: "Como se dice Never en espanol?",
+    question: `¿Cómo se dice "Never" en español?`,
     progress: 0,
   },
   {
@@ -2550,7 +2551,7 @@ export const basicWords = [
     ],
     image_url:
       "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=400",
-    question: "Como se dice Very en espanol?",
+    question: `¿Cómo se dice "Very" en español?`,
     progress: 0,
   },
   {
@@ -2574,7 +2575,7 @@ export const basicWords = [
     ],
     image_url:
       "https://images.unsplash.com/photo-1552664730-d307ca884978?w=400",
-    question: "Como se dice Only en espanol?",
+    question: `¿Cómo se dice "Only" en español?`,
     progress: 0,
   },
   {
@@ -2598,7 +2599,7 @@ export const basicWords = [
     ],
     image_url:
       "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=400",
-    question: "Como se dice And en espanol?",
+    question: `¿Cómo se dice "And" en español?`,
     progress: 0,
   },
   {
@@ -2611,7 +2612,7 @@ export const basicWords = [
     similar_words: ["yo", "él", "tú", "me", "te", "se", "la", "lo", "un", "su"],
     image_url:
       "https://images.unsplash.com/photo-1495521821757-a1efb6729352?w=400",
-    question: "Como se dice Or en espanol?",
+    question: `¿Cómo se dice "Or" en español?`,
     progress: 0,
   },
   {
@@ -2635,7 +2636,7 @@ export const basicWords = [
     ],
     image_url:
       "https://images.unsplash.com/photo-1552664730-d307ca884978?w=400",
-    question: "Como se dice But en espanol?",
+    question: `¿Cómo se dice "But" en español?`,
     progress: 0,
   },
   {
@@ -2648,7 +2649,7 @@ export const basicWords = [
     similar_words: ["yo", "él", "tú", "me", "te", "se", "la", "lo", "un", "su"],
     image_url:
       "https://images.unsplash.com/photo-1570129477492-45c003d96eae?w=400",
-    question: "Como se dice In en espanol?",
+    question: `¿Cómo se dice "In" en español?`,
     progress: 0,
   },
   {
@@ -2661,7 +2662,7 @@ export const basicWords = [
     similar_words: ["yo", "él", "tú", "me", "te", "se", "la", "lo", "un", "su"],
     image_url:
       "https://images.unsplash.com/photo-1517457373614-b7152f800fd1?w=400",
-    question: "Como se dice On en espanol?",
+    question: `¿Cómo se dice "On" en español?`,
     progress: 0,
   },
   {
@@ -2674,7 +2675,7 @@ export const basicWords = [
     similar_words: ["yo", "él", "tú", "me", "te", "se", "la", "lo", "un", "su"],
     image_url:
       "https://images.unsplash.com/photo-1570129477492-45c003d96eae?w=400",
-    question: "Como se dice At en espanol?",
+    question: `¿Cómo se dice "At" en español?`,
     progress: 0,
   },
   {
@@ -2698,7 +2699,7 @@ export const basicWords = [
     ],
     image_url:
       "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=400",
-    question: "Como se dice From en espanol?",
+    question: `¿Cómo se dice "From" en español?`,
     progress: 0,
   },
   {
@@ -2711,7 +2712,7 @@ export const basicWords = [
     similar_words: ["yo", "él", "tú", "me", "te", "se", "la", "lo", "un", "su"],
     image_url:
       "https://images.unsplash.com/photo-1488749367386-86a0e6a1fc7e?w=400",
-    question: "Como se dice To en espanol?",
+    question: `¿Cómo se dice "To" en español?`,
     progress: 0,
   },
   {
@@ -2724,7 +2725,7 @@ export const basicWords = [
     similar_words: ["yo", "él", "tú", "me", "te", "se", "la", "lo", "un", "su"],
     image_url:
       "https://images.unsplash.com/photo-1495521821757-a1efb6729352?w=400",
-    question: "Como se dice Of en espanol?",
+    question: `¿Cómo se dice "Of" en español?`,
     progress: 0,
   },
   {
@@ -2748,7 +2749,7 @@ export const basicWords = [
     ],
     image_url:
       "https://images.unsplash.com/photo-1552664730-d307ca884978?w=400",
-    question: "Como se dice With en espanol?",
+    question: `¿Cómo se dice "With" en español?`,
     progress: 0,
   },
   {
@@ -2761,7 +2762,7 @@ export const basicWords = [
     similar_words: ["yo", "él", "tú", "me", "te", "se", "la", "lo", "un", "su"],
     image_url:
       "https://images.unsplash.com/photo-1552664730-d307ca884978?w=400",
-    question: "Como se dice By en espanol?",
+    question: `¿Cómo se dice "By" en español?`,
     progress: 0,
   },
   {
@@ -2785,7 +2786,7 @@ export const basicWords = [
     ],
     image_url:
       "https://images.unsplash.com/photo-1516595022570-f06e0b74e63f?w=400",
-    question: "Como se dice For en espanol?",
+    question: `¿Cómo se dice "For" en español?`,
     progress: 0,
   },
   {
@@ -2809,7 +2810,7 @@ export const basicWords = [
     ],
     image_url:
       "https://images.unsplash.com/photo-1552664730-d307ca884978?w=400",
-    question: "Como se dice About en espanol?",
+    question: `¿Cómo se dice "About" en español?`,
     progress: 0,
   },
   {
@@ -2833,7 +2834,7 @@ export const basicWords = [
     ],
     image_url:
       "https://images.unsplash.com/photo-1516595022570-f06e0b74e63f?w=400",
-    question: "Como se dice One en espanol?",
+    question: `¿Cómo se dice "One" en español?`,
     progress: 0,
   },
   {
@@ -2857,7 +2858,7 @@ export const basicWords = [
     ],
     image_url:
       "https://images.unsplash.com/photo-1552664730-d307ca884978?w=400",
-    question: "Como se dice Two en espanol?",
+    question: `¿Cómo se dice "Two" en español?`,
     progress: 0,
   },
   {
@@ -2881,7 +2882,7 @@ export const basicWords = [
     ],
     image_url:
       "https://images.unsplash.com/photo-1552664730-d307ca884978?w=400",
-    question: "Como se dice Three en espanol?",
+    question: `¿Cómo se dice "Three" en español?`,
     progress: 0,
   },
   {
@@ -2905,7 +2906,7 @@ export const basicWords = [
     ],
     image_url:
       "https://images.unsplash.com/photo-1552664730-d307ca884978?w=400",
-    question: "Como se dice Help en espanol?",
+    question: `¿Cómo se dice "Help" en español?`,
     progress: 0,
   },
   {
@@ -2929,7 +2930,7 @@ export const basicWords = [
     ],
     image_url:
       "https://images.unsplash.com/photo-1570129477492-45c003d96eae?w=400",
-    question: "Como se dice Open en espanol?",
+    question: `¿Cómo se dice "Open" en español?`,
     progress: 0,
   },
   {
@@ -2953,7 +2954,7 @@ export const basicWords = [
     ],
     image_url:
       "https://images.unsplash.com/photo-1570129477492-45c003d96eae?w=400",
-    question: "Como se dice Close en espanol?",
+    question: `¿Cómo se dice "Close" en español?`,
     progress: 0,
   },
   {
@@ -2977,7 +2978,7 @@ export const basicWords = [
     ],
     image_url:
       "https://images.unsplash.com/photo-1487180144351-b8472da7d491?w=400",
-    question: "Como se dice Run en espanol?",
+    question: `¿Cómo se dice "Run" en español?`,
     progress: 0,
   },
   {
@@ -3001,7 +3002,7 @@ export const basicWords = [
     ],
     image_url:
       "https://images.unsplash.com/photo-1491195262715-f3e0614bcf51?w=400",
-    question: "Como se dice Walk en espanol?",
+    question: `¿Cómo se dice "Walk" en español?`,
     progress: 0,
   },
 ];
